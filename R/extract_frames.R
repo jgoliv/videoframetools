@@ -23,8 +23,6 @@ extract_frames <- function(path, fps = 1) {
       temp_dir <- file.path(output_dir, video_name)
       if (!dir.exists(temp_dir)) dir.create(temp_dir, recursive = TRUE)
 
-      print(glue::glue("extraindo frames do {video_name}"))
-
       av_video_images(video_file, destdir = temp_dir, format = "png", fps = fps)
 
       temp_files <- list.files(temp_dir, pattern = "\\.png$", full.names = TRUE)

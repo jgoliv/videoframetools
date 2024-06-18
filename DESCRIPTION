@@ -13,5 +13,6 @@ Depends:
   dplyr,
   purrr,
   av,
+  lubridate,
   roxygen2
 RoxygenNote: 7.3.1
