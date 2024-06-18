@@ -1,6 +1,6 @@
 Package: videoframetools
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Tools to cut videos into clips and extract frames, making it easier to prepare datasets for training ML/AI models.
 Version: 0.1.0
 Author: Who wrote it
 Maintainer: The package maintainer <yourself@somewhere.net>
@@ -9,3 +9,9 @@ Description: More about what it does (maybe more than one line)
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
+Depends: 
+  dplyr,
+  purrr,
+  av,
+  roxygen2
+RoxygenNote: 7.3.1
