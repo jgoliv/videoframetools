@@ -26,7 +26,7 @@ trim_video <- function(video_path, dftrim, output_dir) {
 
       duration <- end - begin
 
-      output_file <- file.path(output_dir, paste0(video_name, "trim_", i, ".mp4"))
+      output_file <- file.path(output_dir, paste0(video_name, "_trim_", i, ".mp4"))
 
       ffmpeg_command <-
         sprintf(
