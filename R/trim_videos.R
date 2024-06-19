@@ -17,6 +17,8 @@ trim_video <- function(video_path, dftrim, output_dir) {
 
   if (!dir.exists(output_dir)) dir.create(output_dir, recursive = TRUE)
 
+  video_name <- tools::file_path_sans_ext(basename(video_path))
+
   1:nrow(dftrim) |>
     purrr::walk(\(i) {
       begin <- to_seconds(dftrim$begin[i])
@@ -24,7 +26,7 @@ trim_video <- function(video_path, dftrim, output_dir) {
 
       duration <- end - begin
 
-      output_file <- file.path(output_dir, paste0("trim_", i, ".mp4"))
+      output_file <- file.path(output_dir, paste0(video_name, "trim_", i, ".mp4"))
 
       ffmpeg_command <-
         sprintf(
